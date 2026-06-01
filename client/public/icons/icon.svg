@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="#f97316"/>
+  <!-- Chef hat body -->
+  <rect x="176" y="248" width="160" height="100" rx="8" fill="#ffffff"/>
+  <!-- Chef hat top dome -->
+  <ellipse cx="256" cy="220" rx="80" ry="70" fill="#ffffff"/>
+  <!-- Hat band -->
+  <rect x="176" y="248" width="160" height="20" rx="0" fill="#fed7aa"/>
+  <!-- Fork left -->
+  <rect x="196" y="290" width="8" height="50" rx="4" fill="#f97316"/>
+  <rect x="196" y="270" width="3" height="22" rx="2" fill="#f97316"/>
+  <rect x="201" y="270" width="3" height="22" rx="2" fill="#f97316"/>
+  <!-- Knife right -->
+  <rect x="308" y="270" width="8" height="70" rx="4" fill="#f97316"/>
+  <polygon points="316,270 324,285 316,290" fill="#f97316"/>
+</svg>

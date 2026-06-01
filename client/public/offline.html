@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RecipeBox — Offline</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #fff8f0;
+      color: #1c1917;
+      text-align: center;
+      padding: 2rem;
+      gap: 1rem;
+    }
+    .emoji { font-size: 4rem; }
+    h1 { font-size: 2rem; font-weight: 700; }
+    p { color: #78716c; max-width: 360px; line-height: 1.6; }
+    .actions { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin-top: 0.5rem; }
+    a {
+      padding: 0.6rem 1.4rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .primary { background: #f97316; color: #fff; }
+    .primary:hover { background: #ea6c10; }
+    .secondary { background: #e7e5e4; color: #1c1917; }
+    .secondary:hover { background: #d6d3d1; }
+  </style>
+</head>
+<body>
+  <div class="emoji">🍽️</div>
+  <h1>You're offline</h1>
+  <p>
+    No internet connection right now. Your <strong>Favorites</strong> are saved locally
+    and fully available offline — tap below to view them.
+  </p>
+  <div class="actions">
+    <a href="/favorites" class="primary">View Favorites</a>
+    <a href="/" class="secondary">Try Again</a>
+  </div>
+</body>
+</html>

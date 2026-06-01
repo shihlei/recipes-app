@@ -1,0 +1,28 @@
+{
+  "name": "RecipeBox",
+  "short_name": "RecipeBox",
+  "description": "Browse and save your favourite recipes from around the world.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "orientation": "any",
+  "categories": ["food", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "My Favorites",
+      "short_name": "Favorites",
+      "description": "View your saved recipes (works offline)",
+      "url": "/favorites",
+      "icons": [{ "src": "/icons/icon.png", "sizes": "any" }]
+    }
+  ]
+}
