@@ -6,14 +6,21 @@ import App from './App';
 import { queryClient } from './lib/queryClient';
 import './styles/globals.css';
 
-// Register service worker in production (and dev if you want to test)
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .then((reg) => console.log('[SW] registered', reg.scope))
-      .catch((err) => console.warn('[SW] registration failed', err));
-  });
+  if (import.meta.env.PROD) {
+    // Register SW only in production — in dev it intercepts Vite's requests and breaks HMR
+    window.addEventListener('load', () => {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((reg) => console.log('[SW] registered', reg.scope))
+        .catch((err) => console.warn('[SW] registration failed', err));
+    });
+  } else {
+    // Unregister any SW left over from a previous session so normal refresh works
+    navigator.serviceWorker.getRegistrations().then((regs) => {
+      regs.forEach((reg) => reg.unregister());
+    });
+  }
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
